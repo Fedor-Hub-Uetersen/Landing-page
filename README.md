@@ -22,7 +22,7 @@ Dev.Chebur.Shop
 
 🔗 Полезные ссылки
 https://tech.chebur.shop
-https://chebur.shop
+https://fedorcheb.chebur.shop
 
 Связаться с нами
 Watsapp:+49017661566343
