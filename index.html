@@ -8,46 +8,35 @@
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; overflow-x: hidden; width: 100%; }
         
+        /* Баннер */
         .ad-banner { background: #fdf2b3; padding: 15px; text-align: center; border-bottom: 2px solid #e6b800; display: flex; justify-content: center; align-items: center; }
         .close-btn { cursor: pointer; margin-left: 15px; font-weight: bold; color: #999; font-size: 1.2rem; }
         
+        /* Меню */
         nav { background: #333; color: #fff; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; display: inline-block; padding: 5px; }
         .lang-switcher { text-align: right; padding: 5px; }
         .lang-switcher button { cursor: pointer; background: #444; color: white; border: none; padding: 5px 10px; }
 
-        header { background: #2c3e50; color: #fff; padding: 3rem 1rem; text-align: center; }
+        /* Слайдер в шапке */
+        header { background: #2c3e50; color: #fff; padding: 2rem 1rem; text-align: center; height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .slide { display: none; }
+        .slide.active { display: block; animation: fade 1s; }
+        @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
         .container { width: 95%; max-width: 900px; margin: auto; padding: 2rem 0; }
         .section { margin-bottom: 3rem; }
-        
         .trust-box { border: 2px dashed #e6b800; padding: 25px; background: #fdf2b3; border-radius: 10px; }
-        .trust-box p { margin: 15px 0; }
-        
         .service-link { display: block; color: #333; text-decoration: none; margin: 15px 0; font-weight: bold; padding: 15px; background: #eee; border-radius: 8px; }
-        .service-link:hover { color: #e67e22; background: #e0e0e0; }
+        .service-link:hover { background: #e0e0e0; }
         
         #contact { background:#2c3e50; padding:30px; color:#fff; text-align:center; border-radius:15px; }
 
         @media (max-width: 600px) {
-            /* Увеличиваем общий базовый шрифт */
-            body { font-size: 20px !important; } 
-            
-            /* Делаем заголовок h1 еще заметнее */
-            h1 { font-size: 2.5rem !important; line-height: 1.1; padding: 20px 10px; }
-            
-            /* Главная настройка для текста "О нас" */
-            .trust-box { 
-                font-size: 1.2rem !important; /* Укрупняем текст */
-                line-height: 1.7 !important; /* Больше воздуха между строками */
-                padding: 25px !important; 
-            }
-            .trust-box p { margin-bottom: 20px !important; } /* Отступы между абзацами */
-
-            /* Увеличиваем меню для удобства */
-            nav a { display: block; margin: 15px 0; font-size: 1.4rem; padding: 10px; }
-            
-            .container { width: 95% !important; }
-            .order-btn { padding: 25px !important; width: 90% !important; font-size: 1.3rem; }
+            body { font-size: 18px; }
+            h1 { font-size: 1.8rem; }
+            .trust-box { font-size: 1.1rem; padding: 20px; }
+            nav a { display: block; margin: 10px 0; }
         }
     </style>
 </head>
@@ -72,17 +61,22 @@
     <a href="#contact" data-ru="Контакты" data-en="Contact Us">Контакты</a>
 </nav>
 
-<header>
-    <h1 data-ru="Цифровой фундамент вашего бизнеса" data-en="Your Digital Foundation">Цифровой фундамент вашего бизнеса</h1>
-    <a href="#contact" class="order-btn" style="display:inline-block; background:#e67e22; color:white; padding:15px 30px; text-decoration:none; border-radius:5px; margin-top:20px;" data-ru="Заказать проект" data-en="Order Project">Заказать проект</a>
+<header id="slider">
+    <div class="slide active">
+        <h1 data-ru="Цифровой фундамент вашего бизнеса" data-en="Your Digital Foundation">Цифровой фундамент вашего бизнеса</h1>
+    </div>
+    <div class="slide">
+        <h1 data-ru="Надежные IT-решения" data-en="Reliable IT Solutions">Надежные IT-решения</h1>
+    </div>
+    <a href="#contact" style="background:#e67e22; color:white; padding:15px 30px; text-decoration:none; border-radius:5px; margin-top:10px;" data-ru="Заказать проект" data-en="Order Project">Заказать проект</a>
 </header>
 
 <div class="container">
     <section id="about" class="section">
         <h2 data-ru="О нас" data-en="About Us">О нас</h2>
         <div class="trust-box" id="about-content" 
-             data-ru="<p><strong>Надежный цифровой фундамент: основа вашего успеха в современном мире</strong></p><p>В эпоху, когда технологии развиваются стремительно, бизнес сталкивается с постоянным выбором: как оставаться эффективным, защищенным и конкурентоспособным? Мы убеждены, что ответ кроется в правильной архитектуре IT-решений. Наша миссия — создание надежного цифрового фундамента для вашего бизнеса.</p><p><strong>Почему фундамент важнее фасада?</strong></p><p>Часто компании фокусируются на внешних атрибутах. Однако без прочной «цифровой базы» эти элементы становятся уязвимыми. Мы подходим к вопросу иначе, уделяя внимание трем критическим столпам: безопасности, масштабируемости и прозрачности процессов.</p><p><strong>Ваше спокойствие — наш главный результат</strong></p><p>Мы берем на себя техническую сложность, чтобы вы могли управлять развитием своего дела. Готовы заложить прочное основание для роста вашего бизнеса?</p>" 
-             data-en="<p><strong>A Reliable Digital Foundation: The Basis of Your Success</strong></p><p>In an era of rapid technological change, businesses constantly face choices about efficiency and competitiveness. We believe the answer lies in the right IT architecture. Our mission is to build a reliable digital foundation for your business.</p><p><strong>Why is the foundation more important than the facade?</strong></p><p>Companies often focus on external attributes, but without a solid digital base, these elements remain vulnerable. We focus on three critical pillars: security, scalability, and process transparency.</p><p><strong>Your peace of mind is our main result</strong></p><p>We handle the technical complexity so you can focus on growing your business. Ready to build a solid foundation for your growth?</p>">
+             data-ru="<p>Создаем надежный цифровой фундамент для вашего бизнеса. Техническая точность и ответственность в каждом проекте.</p>" 
+             data-en="<p>Creating a reliable digital foundation for your business. Technical precision and responsibility in every project.</p>">
         </div>
     </section>
 
@@ -101,24 +95,29 @@
 </div>
 
 <footer style="text-align:center; padding:2rem; color:#777;">
-    <a href="https://Fedorcheb.chebur.shop" target="_blank" style="text-decoration: none; color: #777; transition: 0.3s; font-weight: bold;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='#777'">
-        &copy; 2026 Dev.Fedorcheb.chebur.shop Web Development
-    </a>
+    <a href="https://Fedorcheb.chebur.shop" target="_blank" style="text-decoration: none; color: #777; font-weight: bold;">&copy; 2026 Dev.Fedorcheb.chebur.shop Web Development</a>
 </footer>
+
 <script>
     function setLanguage(lang) {
-        // Переключение обычных текстов
         document.querySelectorAll('[data-ru]').forEach(el => {
             if (el.getAttribute('data-' + lang)) {
-                if (el.id === 'about-content') {
-                    el.innerHTML = el.getAttribute('data-' + lang); // Для блока с HTML
-                } else {
-                    el.innerText = el.getAttribute('data-' + lang); // Для обычного текста
-                }
+                if (el.id === 'about-content') el.innerHTML = el.getAttribute('data-' + lang);
+                else el.innerText = el.getAttribute('data-' + lang);
             }
         });
         localStorage.setItem('userLang', lang);
     }
+    
+    // Слайдер
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4000);
+
     window.onload = () => setLanguage(localStorage.getItem('userLang') || 'ru');
 </script>
 
