@@ -8,31 +8,30 @@
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; overflow-x: hidden; width: 100%; }
         
-        /* Стили логотипа */
         .logo { height: 40px; vertical-align: middle; margin-right: 15px; }
         
-        /* Баннер */
         .ad-banner { background: #fdf2b3; padding: 15px; text-align: center; border-bottom: 2px solid #e6b800; display: flex; justify-content: center; align-items: center; }
         .close-btn { cursor: pointer; margin-left: 15px; font-weight: bold; color: #999; font-size: 1.2rem; }
         
-        /* Навигация */
         nav { background: #333; color: #fff; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
         nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; display: inline-block; padding: 5px; }
         .lang-switcher { margin-left: auto; padding: 5px; }
         .lang-switcher button { cursor: pointer; background: #444; color: white; border: 1px solid #666; padding: 5px 10px; border-radius: 3px; }
 
-        /* Слайдер */
         header { background: #2c3e50; color: #fff; padding: 2rem 1rem; text-align: center; height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .slide { display: none; }
         .slide.active { display: block; animation: fade 1s; }
         @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Контент */
         .container { width: 95%; max-width: 900px; margin: auto; padding: 2rem 0; }
         .section { margin-bottom: 3rem; }
         .trust-box { border: 2px dashed #e6b800; padding: 25px; background: #fdf2b3; border-radius: 10px; }
         .service-link { display: block; color: #333; text-decoration: none; margin: 15px 0; font-weight: bold; padding: 15px; background: #eee; border-radius: 8px; }
         .service-link:hover { background: #e0e0e0; }
+        
+        /* Сетка для продуктов */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
         #contact { background:#2c3e50; padding:30px; color:#fff; text-align:center; border-radius:15px; }
 
         @media (max-width: 600px) {
@@ -54,9 +53,11 @@
 <nav>
     <img src="logo.png" alt="Logo" class="logo">
     <a href="#about" data-ru="О нас" data-en="About Us" data-ua="Про нас">О нас</a>
-    <a href="#services" data-ru="Услуги" data-en="Services" data-ua="Послуги">Услуги</a>
+    <a href="#services" data-ru="Услуги" data-en="Services" data-ua="Наші послуги">Услуги</a>
+    <a href="#products" data-ru="Продукты" data-en="Products" data-ua="Продукти">Продукты</a>
     <a href="#video" data-ru="Реклама" data-en="Video" data-ua="Відео">Реклама</a>
     <a href="#contact" data-ru="Контакты" data-en="Contact Us" data-ua="Контакти">Контакты</a>
+    
     <div class="lang-switcher">
         <button onclick="setLanguage('ru')">RU</button>
         <button onclick="setLanguage('en')">EN</button>
@@ -79,26 +80,38 @@
 
 <div class="container">
     <section id="about" class="section">
-    <h2 data-ru="О нас" data-en="About Us" data-ua="Про нас">О нас</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
-        <!-- Фото -->
-        <div style="flex: 1; min-width: 300px;">
-            <img src="about-photo.png" alt="About Us" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <h2 data-ru="О нас" data-en="About Us" data-ua="Про нас">О нас</h2>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="about-photo.png" alt="About Us" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            </div>
+            <div style="flex: 1; min-width: 300px;" id="about-content" 
+                 data-ru="<p><strong>Ваш успех — наша работа.</strong></p><p>Мы специализируемся на создании мощных IT-решений, которые помогают бизнесу расти. Наша команда берет на себя всю техническую рутину.</p>" 
+                 data-en="<p><strong>Your success is our job.</strong></p><p>We specialize in creating powerful IT solutions that help businesses grow. Our team handles all the technical routine.</p>"
+                 data-ua="<p><strong>Ваш успіх — наша робота.</strong></p><p>Ми спеціалізуємося на створенні потужних IT-рішень, які допомагають бізнесу зростати. Наша команда бере на себе всю технічну рутину.</p>">
+            </div>
         </div>
-        <!-- Статья -->
-        <div style="flex: 1; min-width: 300px;" id="about-content" 
-             data-ru="<p><strong>Ваш успех — наша работа.</strong></p><p>Мы специализируемся на создании мощных IT-решений, которые помогают бизнесу расти. За годы работы мы поняли главное: технологии должны быть не только передовыми, но и понятными. Наша команда берет на себя всю техническую рутину — от разработки сайта до сложной настройки серверов, чтобы вы могли сфокусироваться на своем деле.</p><p>Мы строим долгосрочные отношения с клиентами, основанные на честности, профессионализме и стремлении сделать каждую деталь идеальной.</p>" 
-             data-en="<p><strong>Your success is our job.</strong></p><p>We specialize in creating powerful IT solutions that help businesses grow. Over the years, we have learned the most important thing: technologies must be not only advanced but also understandable. Our team handles all the technical routine — from website development to complex server configuration, so you can focus on your business.</p><p>We build long-term relationships with clients based on honesty, professionalism, and a commitment to making every detail perfect.</p>"
-             data-ua="<p><strong>Ваш успіх — наша робота.</strong></p><p>Ми спеціалізуємося на створенні потужних IT-рішень, які допомагають бізнесу зростати. За роки роботи ми зрозуміли головне: технології мають бути не лише передовими, а й зрозумілими. Наша команда бере на себе всю технічну рутину — від розробки сайту до складного налаштування серверів, щоб ви могли сфокусуватися на своїй справі.</p><p>Ми будуємо довгострокові відносини з клієнтами, засновані на чесності, професіоналізмі та прагненні зробити кожну деталь ідеальною.</p>">
-        </div>
-    </div>
-</section>
+    </section>
 
     <section id="services" class="section">
         <h2 data-ru="Наши услуги" data-en="Our Services" data-ua="Наші послуги">Наши услуги</h2>
         <a href="https://tech.chebur.shop" class="service-link">🚀 <span data-ru="Веб-разработка" data-en="Web Development" data-ua="Веб-розробка">Веб-разработка</span></a>
         <a href="https://accounts.hetzner.com/" class="service-link">⚙️ <span data-ru="Настройка серверов" data-en="Server Setup" data-ua="Налаштування серверів">Настройка серверов</span></a>
         <a href="https://youtu.be/2RCotnXv3-o" class="service-link">📈 <span data-ru="Продвижение" data-en="Promotion" data-ua="Просування">Продвижение</span></a>
+    </section>
+
+    <section id="products" class="section">
+        <h2 data-ru="Наши продукты" data-en="Our Products" data-ua="Наші продукти">Наши продукты</h2>
+        <div class="grid">
+            <div class="trust-box">
+                <h3>SOS-ID Online</h3>
+                <p data-ru="Цифровая система экстренной помощи." data-en="Digital emergency system." data-ua="Цифрова система екстреної допомоги.">Цифровая система экстренной помощи.</p>
+            </div>
+            <div class="trust-box">
+                <h3>Chebur.Shop</h3>
+                <p data-ru="Профессиональные web-решения." data-en="Professional web solutions." data-ua="Професійні web-рішення.">Профессиональные web-решения.</p>
+            </div>
+        </div>
     </section>
 
     <section id="video" class="section">
