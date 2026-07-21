@@ -2,18 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dev.Chebur.Shop | Professional Web Solutions</title>
+     <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev.Chebur.Shop | Professional Web Solutions</title>
+    <meta name="description" content="Профессиональные IT-решения, веб-разработка, настройка серверов и полезные цифровые сервисы.">
     <style>
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #222; margin: 0; padding: 0; overflow-x: hidden; width: 100%; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; overflow-x: hidden; width: 100%; }
         
         .logo { height: 40px; vertical-align: middle; margin-right: 15px; }
         
         .ad-banner { background: #fdf2b3; padding: 15px; text-align: center; border-bottom: 2px solid #e6b800; display: flex; justify-content: center; align-items: center; }
-        .close-btn { cursor: pointer; margin-left: 15px; font-weight: bold; color: #666; font-size: 1.2rem; }
+        .close-btn { cursor: pointer; margin-left: 15px; font-weight: bold; color: #999; font-size: 1.2rem; }
         
-        nav { background: #222; color: #fff; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
+        nav { background: #333; color: #fff; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
         nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; display: inline-block; padding: 5px; }
         .lang-switcher { margin-left: auto; padding: 5px; }
         .lang-switcher button { cursor: pointer; background: #444; color: white; border: 1px solid #666; padding: 5px 10px; border-radius: 3px; }
@@ -25,8 +30,8 @@
 
         .container { width: 95%; max-width: 900px; margin: auto; padding: 2rem 0; }
         .section { margin-bottom: 3rem; }
-        .trust-box { border: 2px dashed #e6b800; padding: 25px; background: #fdf2b3; border-radius: 10px; color: #111; }
-        .service-link { display: block; color: #111; text-decoration: none; margin: 15px 0; font-weight: bold; padding: 15px; background: #eee; border-radius: 8px; }
+        .trust-box { border: 2px dashed #e6b800; padding: 25px; background: #fdf2b3; border-radius: 10px; }
+        .service-link { display: block; color: #333; text-decoration: none; margin: 15px 0; font-weight: bold; padding: 15px; background: #eee; border-radius: 8px; }
         .service-link:hover { background: #e0e0e0; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -43,14 +48,14 @@
 <body>
 
 <div id="adBanner" class="ad-banner">
-    <a href="https://tech.chebur.shop" style="text-decoration:none; color:#222;">
+    <a href="https://tech.chebur.shop" style="text-decoration:none; color:#333;">
         <span data-ru="Сайты за 100 евро | Tech.chebur.shop" data-en="Websites for 100 euro | Tech.chebur.shop" data-ua="Сайти за 100 євро | Tech.chebur.shop">Сайты за 100 евро | Tech.chebur.shop</span>
     </a>
     <span class="close-btn" onclick="document.getElementById('adBanner').style.display='none'">✕</span>
 </div>
 
 <nav>
-    <img src="logo.png" alt="Логотип Dev.Chebur.Shop" class="logo">
+    <img src="logo.png" alt="Logo" class="logo">
     <a href="#about" data-ru="О нас" data-en="About Us" data-ua="Про нас">О нас</a>
     <a href="#services" data-ru="Услуги" data-en="Services" data-ua="Наші послуги">Услуги</a>
     <a href="#products" data-ru="Продукты" data-en="Products" data-ua="Продукти">Продукты</a>
@@ -77,12 +82,12 @@
     <a href="#contact" style="background:#e67e22; color:white; padding:15px 30px; text-decoration:none; border-radius:5px; margin-top:10px;" data-ru="Заказать проект" data-en="Order Project" data-ua="Замовити проект">Заказать проект</a>
 </header>
 
-<main class="container">
+<div class="container">
     <section id="about" class="section">
         <h2 data-ru="О нас" data-en="About Us" data-ua="Про нас">О нас</h2>
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
             <div style="flex: 1; min-width: 300px;">
-                <img src="about-photo.png" alt="Фото команды о нас" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <img src="about-photo.png" alt="About Us" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
             </div>
             <div style="flex: 1; min-width: 300px;" id="about-content" 
                  data-ru="<p><strong>Ваш успех — наша работа.</strong></p><p>Мы специализируемся на создании мощных IT-решений, которые помогают бизнесу расти. Наша команда берет на себя всю техническую рутину.</p>" 
@@ -104,33 +109,35 @@
         <div class="grid">
             <a href="https://sos-id.online" style="text-decoration: none; color: inherit;">
                 <div class="trust-box">
-                    <img src="prod1.png" alt="Продукт SOS-ID.Online" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                    <img src="prod1.png" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
                     <h3 data-ru="SOS-ID.Online" data-en="SOS-ID.Online" data-ua="SOS-ID.Online">SOS-ID.Online</h3>
                     <p data-ru="Цифровая система экстренной помощи." data-en="Digital emergency system." data-ua="Цифрова система екстреної допомоги.">Цифровая система экстренной помощи.</p>
                 </div>
             </a>
             <a href="https://chebur.shop" style="text-decoration: none; color: inherit;">
                 <div class="trust-box">
-                    <img src="prod2.png" alt="Продукт Chebur.Shop" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                    <img src="prod2.png" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
                     <h3 data-ru="Chebur.Shop" data-en="Chebur.Shop" data-ua="Chebur.Shop">Chebur.Shop</h3>
                     <p data-ru="Профессиональные web-решения." data-en="Professional web solutions." data-ua="Професійні web-рішення.">Профессиональные web-решения.</p>
                 </div>
             </a>
             <a href="https://t.me/Fritz_Gemeni_Bot" style="text-decoration: none; color: inherit;">
                 <div class="trust-box">
-                    <img src="prod3.png" alt="Продукт Fritz_bot" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                    <img src="prod3.png" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
                     <h3 data-ru="Fritz_bot" data-en="Fritz_bot" data-ua="Fritz_bot">Fritz_bot</h3>
                     <p data-ru="Бот-помощник диабетика." data-en="Diabetic assistant bot." data-ua="Бот-помічник діабетика.">Бот-помощник диабетика.</p>
                 </div>
-            </a>
             <a href="https://t.me/Veteran_Pionier_Fedor_bot" style="text-decoration: none; color: inherit;">
                 <div class="trust-box">
-                    <img src="prod4.png" alt="Продукт Masseur Fedya" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                    <!-- Было prod3.png, теперь правильно: prod4.png -->
+                    <img src="prod4.png" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
                     <h3 data-ru="Masseur Fedya" data-en="Masseur Fedya" data-ua="Masseur Fedya">Masseur Fedya</h3>
                     <p data-ru="Бот-помощник массажиста." data-en="Massage therapist assistant bot." data-ua="Бот-помічник масажиста.">Бот-помощник массажиста.</p>
                 </div>
             </a>
+            <!-- Пустой блок 5 -->
             <div class="trust-box"></div>
+            <!-- Пустой блок 6 -->
             <div class="trust-box"></div>
         </div>
     </section>
@@ -138,28 +145,27 @@
     <section id="video" class="section">
         <h2 data-ru="Наша реклама" data-en="Our Video" data-ua="Наше відео">Наша реклама</h2>
         <div style="text-align: center; margin-top: 20px;">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/jbkkG22WnQU" title="Рекламное видео Dev.Chebur.Shop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/jbkkG22WnQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
     <section id="contact">
         <h2 data-ru="Контакты" data-en="Contact Us" data-ua="Контакти">Контакты</h2>
-        <a href="tel:+4917661566343" style="display:block; color:#00ffff; padding:15px; text-decoration:none;">Anruf: +49 176 61566343</a>
-        <a href="mailto:tech.chebur@gmail.com" style="display:block; color:#00ffff; padding:15px; text-decoration:none;">Email: tech.chebur@gmail.com</a>
+        <a href="tel:+4917661566343" style="display:block; color:#00d4ff; padding:15px; text-decoration:none;">Anruf: +49 176 61566343</a>
+        <a href="mailto:tech.chebur@gmail.com" style="display:block; color:#00d4ff; padding:15px; text-decoration:none;">Email: tech.chebur@gmail.com</a>
     </section>
-</main>
+</div>
 
-<footer style="text-align:center; padding:2rem; color:#444;">
+<footer style="text-align:center; padding:2rem; color:#777;">
     <p>
-        <a href="https://github.com/Fedor-Hub-Uetersen/Landing-page" target="_blank" style="text-decoration: none; color: #222; font-weight: bold; margin-bottom: 10px; display: block;">
+        <a href="https://github.com/Fedor-Hub-Uetersen/Landing-page" target="_blank" style="text-decoration: none; color: #555; font-weight: bold; margin-bottom: 10px; display: block;">
             GitHub Repository
         </a>
     </p>
-    <a href="https://Fedorcheb.chebur.shop" target="_blank" style="text-decoration: none; color: #444; font-weight: bold;">
+    <a href="https://Fedorcheb.chebur.shop" target="_blank" style="text-decoration: none; color: #777; font-weight: bold;">
         &copy; 2026 Dev.Fedorcheb.chebur.shop Web Development
     </a>
 </footer>
-
 <script>
     function setLanguage(lang) {
         document.querySelectorAll('[data-ru]').forEach(el => {
